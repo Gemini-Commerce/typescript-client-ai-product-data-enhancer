@@ -11,11 +11,14 @@ http/http.ts
 http/isomorphic-fetch.ts
 index.ts
 middleware.ts
+models/AiproductdataenhancerDataToTranslate.ts
 models/AiproductdataenhancerFillProductDataRequest.ts
 models/AiproductdataenhancerFillProductDataResponse.ts
 models/AiproductdataenhancerLanguageCode.ts
 models/AiproductdataenhancerProductDataToFill.ts
 models/AiproductdataenhancerProductInformation.ts
+models/AiproductdataenhancerTranslateDataRequest.ts
+models/AiproductdataenhancerTranslateDataResponse.ts
 models/ObjectSerializer.ts
 models/ProtobufAny.ts
 models/RpcStatus.ts

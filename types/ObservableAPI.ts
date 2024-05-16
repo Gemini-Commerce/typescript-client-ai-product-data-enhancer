@@ -2,11 +2,14 @@ import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/htt
 import { Configuration} from '../configuration'
 import { Observable, of, from } from '../rxjsStub';
 import {mergeMap, map} from  '../rxjsStub';
+import { AiproductdataenhancerDataToTranslate } from '../models/AiproductdataenhancerDataToTranslate';
 import { AiproductdataenhancerFillProductDataRequest } from '../models/AiproductdataenhancerFillProductDataRequest';
 import { AiproductdataenhancerFillProductDataResponse } from '../models/AiproductdataenhancerFillProductDataResponse';
 import { AiproductdataenhancerLanguageCode } from '../models/AiproductdataenhancerLanguageCode';
 import { AiproductdataenhancerProductDataToFill } from '../models/AiproductdataenhancerProductDataToFill';
 import { AiproductdataenhancerProductInformation } from '../models/AiproductdataenhancerProductInformation';
+import { AiproductdataenhancerTranslateDataRequest } from '../models/AiproductdataenhancerTranslateDataRequest';
+import { AiproductdataenhancerTranslateDataResponse } from '../models/AiproductdataenhancerTranslateDataResponse';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { RpcStatus } from '../models/RpcStatus';
 
@@ -53,6 +56,35 @@ export class ObservableAiProductDataEnhancerApi {
      */
     public aiProductDataEnhancerFillProductData(body: AiproductdataenhancerFillProductDataRequest, _options?: Configuration): Observable<AiproductdataenhancerFillProductDataResponse> {
         return this.aiProductDataEnhancerFillProductDataWithHttpInfo(body, _options).pipe(map((apiResponse: HttpInfo<AiproductdataenhancerFillProductDataResponse>) => apiResponse.data));
+    }
+
+    /**
+     * @param body 
+     */
+    public aiProductDataEnhancerTranslateDataWithHttpInfo(body: AiproductdataenhancerTranslateDataRequest, _options?: Configuration): Observable<HttpInfo<AiproductdataenhancerTranslateDataResponse>> {
+        const requestContextPromise = this.requestFactory.aiProductDataEnhancerTranslateData(body, _options);
+
+        // build promise chain
+        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
+        for (let middleware of this.configuration.middleware) {
+            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
+        }
+
+        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
+            pipe(mergeMap((response: ResponseContext) => {
+                let middlewarePostObservable = of(response);
+                for (let middleware of this.configuration.middleware) {
+                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
+                }
+                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.aiProductDataEnhancerTranslateDataWithHttpInfo(rsp)));
+            }));
+    }
+
+    /**
+     * @param body 
+     */
+    public aiProductDataEnhancerTranslateData(body: AiproductdataenhancerTranslateDataRequest, _options?: Configuration): Observable<AiproductdataenhancerTranslateDataResponse> {
+        return this.aiProductDataEnhancerTranslateDataWithHttpInfo(body, _options).pipe(map((apiResponse: HttpInfo<AiproductdataenhancerTranslateDataResponse>) => apiResponse.data));
     }
 
 }
