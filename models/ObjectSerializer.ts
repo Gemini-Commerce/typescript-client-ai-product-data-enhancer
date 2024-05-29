@@ -23,7 +23,7 @@ import { AiproductdataenhancerJobStatus } from '../models/AiproductdataenhancerJ
 import { AiproductdataenhancerLanguageCode } from '../models/AiproductdataenhancerLanguageCode';
 import { AiproductdataenhancerProductDataToFill } from '../models/AiproductdataenhancerProductDataToFill';
 import { AiproductdataenhancerProductInformation } from '../models/AiproductdataenhancerProductInformation';
-import { AiproductdataenhancerTranslateDataRequest    } from '../models/AiproductdataenhancerTranslateDataRequest';
+import { AiproductdataenhancerTranslateDataRequest     } from '../models/AiproductdataenhancerTranslateDataRequest';
 import { AiproductdataenhancerTranslateDataResponse } from '../models/AiproductdataenhancerTranslateDataResponse';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { RpcStatus } from '../models/RpcStatus';
