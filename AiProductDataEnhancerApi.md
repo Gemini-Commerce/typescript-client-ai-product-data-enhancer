@@ -163,7 +163,8 @@ let body:.AiProductDataEnhancerApiAiProductDataEnhancerTranslateDataRequest = {
   // AiproductdataenhancerTranslateDataRequest
   body: {
     tenantId: "tenantId_example",
-    languageCode: "LANGUAGE_CODE_UNKNOWN",
+    targetLanguage: "LANGUAGE_CODE_UNKNOWN",
+    sourceLanguage: "LANGUAGE_CODE_UNKNOWN",
     dataToTranslate: [
       {
         name: "name_example",
