@@ -38,10 +38,10 @@ export interface AiproductdataenhancerFillProductDataRequest {
     'productInformation'?: AiproductdataenhancerProductInformation;
     /**
      * 
-     * @type {Array<string>}
+     * @type {Array<AiproductdataenhancerProductDataToFill>}
      * @memberof AiproductdataenhancerFillProductDataRequest
      */
-    'productDataToFill'?: Array<string>;
+    'productDataToFill'?: Array<AiproductdataenhancerProductDataToFill>;
     /**
      * 
      * @type {Array<string>}

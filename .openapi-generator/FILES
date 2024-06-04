@@ -8,6 +8,7 @@ src/index.ts
 src/models/AiproductdataenhancerFillProductDataRequest.ts
 src/models/AiproductdataenhancerFillProductDataResponse.ts
 src/models/AiproductdataenhancerLanguageCode.ts
+src/models/AiproductdataenhancerProductDataToFill.ts
 src/models/AiproductdataenhancerProductInformation.ts
 src/models/ProtobufAny.ts
 src/models/RpcStatus.ts
