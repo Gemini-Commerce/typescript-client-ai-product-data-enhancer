@@ -12,22 +12,7 @@
  * Do not edit the class manually.
  */
 
-/**
- * 
- * @export
- * @interface AiproductdataenhancerFillProductDataCheckRequest
- */
-export interface AiproductdataenhancerFillProductDataCheckRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof AiproductdataenhancerFillProductDataCheckRequest
-     */
-    'tenantId'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof AiproductdataenhancerFillProductDataCheckRequest
-     */
-    'jobId'?: string;
-}
+
+export * from "./api";
+export * from "./configuration";
+
