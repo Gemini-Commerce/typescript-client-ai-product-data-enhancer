@@ -2,8 +2,12 @@ import { ResponseContext, RequestContext, HttpFile, HttpInfo } from '../http/htt
 import { Configuration} from '../configuration'
 
 import { AiproductdataenhancerDataToTranslate } from '../models/AiproductdataenhancerDataToTranslate';
+import { AiproductdataenhancerError } from '../models/AiproductdataenhancerError';
+import { AiproductdataenhancerFillProductDataCheckRequest } from '../models/AiproductdataenhancerFillProductDataCheckRequest';
+import { AiproductdataenhancerFillProductDataCheckResponse } from '../models/AiproductdataenhancerFillProductDataCheckResponse';
 import { AiproductdataenhancerFillProductDataRequest } from '../models/AiproductdataenhancerFillProductDataRequest';
 import { AiproductdataenhancerFillProductDataResponse } from '../models/AiproductdataenhancerFillProductDataResponse';
+import { AiproductdataenhancerJobStatus } from '../models/AiproductdataenhancerJobStatus';
 import { AiproductdataenhancerLanguageCode } from '../models/AiproductdataenhancerLanguageCode';
 import { AiproductdataenhancerProductDataToFill } from '../models/AiproductdataenhancerProductDataToFill';
 import { AiproductdataenhancerProductInformation } from '../models/AiproductdataenhancerProductInformation';
@@ -38,6 +42,22 @@ export class PromiseAiProductDataEnhancerApi {
      */
     public aiProductDataEnhancerFillProductData(body: AiproductdataenhancerFillProductDataRequest, _options?: Configuration): Promise<AiproductdataenhancerFillProductDataResponse> {
         const result = this.api.aiProductDataEnhancerFillProductData(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * @param body 
+     */
+    public aiProductDataEnhancerFillProductDataCheckWithHttpInfo(body: AiproductdataenhancerFillProductDataCheckRequest, _options?: Configuration): Promise<HttpInfo<AiproductdataenhancerFillProductDataCheckResponse>> {
+        const result = this.api.aiProductDataEnhancerFillProductDataCheckWithHttpInfo(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * @param body 
+     */
+    public aiProductDataEnhancerFillProductDataCheck(body: AiproductdataenhancerFillProductDataCheckRequest, _options?: Configuration): Promise<AiproductdataenhancerFillProductDataCheckResponse> {
+        const result = this.api.aiProductDataEnhancerFillProductDataCheck(body, _options);
         return result.toPromise();
     }
 
