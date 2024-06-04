@@ -1,6 +1,7 @@
 export * from '../models/AiproductdataenhancerFillProductDataRequest';
 export * from '../models/AiproductdataenhancerFillProductDataResponse';
 export * from '../models/AiproductdataenhancerLanguageCode';
+export * from '../models/AiproductdataenhancerProductDataToFill';
 export * from '../models/AiproductdataenhancerProductInformation';
 export * from '../models/ProtobufAny';
 export * from '../models/RpcStatus';
@@ -8,6 +9,7 @@ export * from '../models/RpcStatus';
 import { AiproductdataenhancerFillProductDataRequest       } from '../models/AiproductdataenhancerFillProductDataRequest';
 import { AiproductdataenhancerFillProductDataResponse } from '../models/AiproductdataenhancerFillProductDataResponse';
 import { AiproductdataenhancerLanguageCode } from '../models/AiproductdataenhancerLanguageCode';
+import { AiproductdataenhancerProductDataToFill } from '../models/AiproductdataenhancerProductDataToFill';
 import { AiproductdataenhancerProductInformation } from '../models/AiproductdataenhancerProductInformation';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { RpcStatus } from '../models/RpcStatus';
@@ -31,6 +33,7 @@ let enumsMap: Set<string> = new Set<string>([
 let typeMap: {[index: string]: any} = {
     "AiproductdataenhancerFillProductDataRequest": AiproductdataenhancerFillProductDataRequest,
     "AiproductdataenhancerFillProductDataResponse": AiproductdataenhancerFillProductDataResponse,
+    "AiproductdataenhancerProductDataToFill": AiproductdataenhancerProductDataToFill,
     "AiproductdataenhancerProductInformation": AiproductdataenhancerProductInformation,
     "ProtobufAny": ProtobufAny,
     "RpcStatus": RpcStatus,

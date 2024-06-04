@@ -32,7 +32,12 @@ let body:.AiProductDataEnhancerApiAiProductDataEnhancerFillProductDataRequest = 
       title: "title_example",
     },
     productDataToFill: [
-      "productDataToFill_example",
+      {
+        name: "name_example",
+        valueSet: [
+          "valueSet_example",
+        ],
+      },
     ],
     domainsToInclude: [
       "domainsToInclude_example",
