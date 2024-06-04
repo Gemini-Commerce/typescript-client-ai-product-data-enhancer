@@ -29,7 +29,13 @@ export interface AiproductdataenhancerTranslateDataRequest {
      * @type {AiproductdataenhancerLanguageCode}
      * @memberof AiproductdataenhancerTranslateDataRequest
      */
-    'languageCode'?: AiproductdataenhancerLanguageCode;
+    'targetLanguage'?: AiproductdataenhancerLanguageCode;
+    /**
+     * 
+     * @type {AiproductdataenhancerLanguageCode}
+     * @memberof AiproductdataenhancerTranslateDataRequest
+     */
+    'sourceLanguage'?: AiproductdataenhancerLanguageCode;
     /**
      * 
      * @type {Array<AiproductdataenhancerDataToTranslate>}
