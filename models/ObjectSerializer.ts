@@ -1,30 +1,14 @@
-export * from '../models/AiproductdataenhancerDataToTranslate';
-export * from '../models/AiproductdataenhancerError';
-export * from '../models/AiproductdataenhancerFillProductDataCheckRequest';
-export * from '../models/AiproductdataenhancerFillProductDataCheckResponse';
 export * from '../models/AiproductdataenhancerFillProductDataRequest';
 export * from '../models/AiproductdataenhancerFillProductDataResponse';
-export * from '../models/AiproductdataenhancerJobStatus';
 export * from '../models/AiproductdataenhancerLanguageCode';
-export * from '../models/AiproductdataenhancerProductDataToFill';
 export * from '../models/AiproductdataenhancerProductInformation';
-export * from '../models/AiproductdataenhancerTranslateDataRequest';
-export * from '../models/AiproductdataenhancerTranslateDataResponse';
 export * from '../models/ProtobufAny';
 export * from '../models/RpcStatus';
 
-import { AiproductdataenhancerDataToTranslate } from '../models/AiproductdataenhancerDataToTranslate';
-import { AiproductdataenhancerError } from '../models/AiproductdataenhancerError';
-import { AiproductdataenhancerFillProductDataCheckRequest } from '../models/AiproductdataenhancerFillProductDataCheckRequest';
-import { AiproductdataenhancerFillProductDataCheckResponse      } from '../models/AiproductdataenhancerFillProductDataCheckResponse';
 import { AiproductdataenhancerFillProductDataRequest       } from '../models/AiproductdataenhancerFillProductDataRequest';
 import { AiproductdataenhancerFillProductDataResponse } from '../models/AiproductdataenhancerFillProductDataResponse';
-import { AiproductdataenhancerJobStatus } from '../models/AiproductdataenhancerJobStatus';
 import { AiproductdataenhancerLanguageCode } from '../models/AiproductdataenhancerLanguageCode';
-import { AiproductdataenhancerProductDataToFill } from '../models/AiproductdataenhancerProductDataToFill';
 import { AiproductdataenhancerProductInformation } from '../models/AiproductdataenhancerProductInformation';
-import { AiproductdataenhancerTranslateDataRequest     } from '../models/AiproductdataenhancerTranslateDataRequest';
-import { AiproductdataenhancerTranslateDataResponse } from '../models/AiproductdataenhancerTranslateDataResponse';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { RpcStatus } from '../models/RpcStatus';
 
@@ -41,21 +25,13 @@ let primitives = [
                  ];
 
 let enumsMap: Set<string> = new Set<string>([
-    "AiproductdataenhancerJobStatus",
     "AiproductdataenhancerLanguageCode",
 ]);
 
 let typeMap: {[index: string]: any} = {
-    "AiproductdataenhancerDataToTranslate": AiproductdataenhancerDataToTranslate,
-    "AiproductdataenhancerError": AiproductdataenhancerError,
-    "AiproductdataenhancerFillProductDataCheckRequest": AiproductdataenhancerFillProductDataCheckRequest,
-    "AiproductdataenhancerFillProductDataCheckResponse": AiproductdataenhancerFillProductDataCheckResponse,
     "AiproductdataenhancerFillProductDataRequest": AiproductdataenhancerFillProductDataRequest,
     "AiproductdataenhancerFillProductDataResponse": AiproductdataenhancerFillProductDataResponse,
-    "AiproductdataenhancerProductDataToFill": AiproductdataenhancerProductDataToFill,
     "AiproductdataenhancerProductInformation": AiproductdataenhancerProductInformation,
-    "AiproductdataenhancerTranslateDataRequest": AiproductdataenhancerTranslateDataRequest,
-    "AiproductdataenhancerTranslateDataResponse": AiproductdataenhancerTranslateDataResponse,
     "ProtobufAny": ProtobufAny,
     "RpcStatus": RpcStatus,
 }

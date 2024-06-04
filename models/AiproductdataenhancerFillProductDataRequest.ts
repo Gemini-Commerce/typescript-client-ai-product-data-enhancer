@@ -11,7 +11,6 @@
  */
 
 import { AiproductdataenhancerLanguageCode } from '../models/AiproductdataenhancerLanguageCode';
-import { AiproductdataenhancerProductDataToFill } from '../models/AiproductdataenhancerProductDataToFill';
 import { AiproductdataenhancerProductInformation } from '../models/AiproductdataenhancerProductInformation';
 import { HttpFile } from '../http/http';
 
@@ -19,7 +18,7 @@ export class AiproductdataenhancerFillProductDataRequest {
     'tenantId'?: string;
     'languageCode'?: AiproductdataenhancerLanguageCode;
     'productInformation'?: AiproductdataenhancerProductInformation;
-    'productDataToFill'?: Array<AiproductdataenhancerProductDataToFill>;
+    'productDataToFill'?: Array<string>;
     'domainsToInclude'?: Array<string>;
     'domainsToExclude'?: Array<string>;
 
@@ -47,7 +46,7 @@ export class AiproductdataenhancerFillProductDataRequest {
         {
             "name": "productDataToFill",
             "baseName": "productDataToFill",
-            "type": "Array<AiproductdataenhancerProductDataToFill>",
+            "type": "Array<string>",
             "format": ""
         },
         {
