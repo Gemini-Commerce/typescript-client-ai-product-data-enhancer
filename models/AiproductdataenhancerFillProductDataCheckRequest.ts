@@ -12,38 +12,28 @@
 
 import { HttpFile } from '../http/http';
 
-export class AiproductdataenhancerProductDataToFill {
-    'name'?: string;
-    'valueSet'?: Array<string>;
-    /**
-    * Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
-    */
-    'metadata'?: { [key: string]: string; };
+export class AiproductdataenhancerFillProductDataCheckRequest {
+    'tenantId'?: string;
+    'jobId'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "tenantId",
+            "baseName": "tenantId",
             "type": "string",
             "format": ""
         },
         {
-            "name": "valueSet",
-            "baseName": "valueSet",
-            "type": "Array<string>",
-            "format": ""
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "{ [key: string]: string; }",
+            "name": "jobId",
+            "baseName": "jobId",
+            "type": "string",
             "format": ""
         }    ];
 
     static getAttributeTypeMap() {
-        return AiproductdataenhancerProductDataToFill.attributeTypeMap;
+        return AiproductdataenhancerFillProductDataCheckRequest.attributeTypeMap;
     }
 
     public constructor() {

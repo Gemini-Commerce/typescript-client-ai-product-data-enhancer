@@ -13,30 +13,16 @@
 import { HttpFile } from '../http/http';
 
 export class AiproductdataenhancerFillProductDataResponse {
-    'productDataFilled'?: { [key: string]: string; };
-    'confidenceRate'?: number;
-    'completionRate'?: number;
+    'jobId'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "productDataFilled",
-            "baseName": "productDataFilled",
-            "type": "{ [key: string]: string; }",
+            "name": "jobId",
+            "baseName": "jobId",
+            "type": "string",
             "format": ""
-        },
-        {
-            "name": "confidenceRate",
-            "baseName": "confidenceRate",
-            "type": "number",
-            "format": "float"
-        },
-        {
-            "name": "completionRate",
-            "baseName": "completionRate",
-            "type": "number",
-            "format": "float"
         }    ];
 
     static getAttributeTypeMap() {

@@ -12,8 +12,12 @@ http/isomorphic-fetch.ts
 index.ts
 middleware.ts
 models/AiproductdataenhancerDataToTranslate.ts
+models/AiproductdataenhancerError.ts
+models/AiproductdataenhancerFillProductDataCheckRequest.ts
+models/AiproductdataenhancerFillProductDataCheckResponse.ts
 models/AiproductdataenhancerFillProductDataRequest.ts
 models/AiproductdataenhancerFillProductDataResponse.ts
+models/AiproductdataenhancerJobStatus.ts
 models/AiproductdataenhancerLanguageCode.ts
 models/AiproductdataenhancerProductDataToFill.ts
 models/AiproductdataenhancerProductInformation.ts
