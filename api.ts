@@ -49,10 +49,10 @@ export interface AiproductdataenhancerFillProductDataRequest {
     'productInformation'?: AiproductdataenhancerProductInformation;
     /**
      * 
-     * @type {Array<string>}
+     * @type {Array<AiproductdataenhancerProductDataToFill>}
      * @memberof AiproductdataenhancerFillProductDataRequest
      */
-    'productDataToFill'?: Array<string>;
+    'productDataToFill'?: Array<AiproductdataenhancerProductDataToFill>;
     /**
      * 
      * @type {Array<string>}
@@ -290,6 +290,25 @@ export const AiproductdataenhancerLanguageCode = {
 export type AiproductdataenhancerLanguageCode = typeof AiproductdataenhancerLanguageCode[keyof typeof AiproductdataenhancerLanguageCode];
 
 
+/**
+ * 
+ * @export
+ * @interface AiproductdataenhancerProductDataToFill
+ */
+export interface AiproductdataenhancerProductDataToFill {
+    /**
+     * 
+     * @type {string}
+     * @memberof AiproductdataenhancerProductDataToFill
+     */
+    'name'?: string;
+    /**
+     * 
+     * @type {Array<string>}
+     * @memberof AiproductdataenhancerProductDataToFill
+     */
+    'valueSet'?: Array<string>;
+}
 /**
  * 
  * @export
