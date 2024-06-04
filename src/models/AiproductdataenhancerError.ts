@@ -15,13 +15,19 @@
 /**
  * 
  * @export
- * @interface AiproductdataenhancerFillProductDataResponse
+ * @interface AiproductdataenhancerError
  */
-export interface AiproductdataenhancerFillProductDataResponse {
+export interface AiproductdataenhancerError {
     /**
      * 
      * @type {string}
-     * @memberof AiproductdataenhancerFillProductDataResponse
+     * @memberof AiproductdataenhancerError
      */
-    'jobId'?: string;
+    'code'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AiproductdataenhancerError
+     */
+    'message'?: string;
 }

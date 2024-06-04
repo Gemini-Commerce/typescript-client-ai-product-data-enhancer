@@ -15,6 +15,8 @@
 
 import * as runtime from '../runtime';
 import type {
+  AiproductdataenhancerFillProductDataCheckRequest,
+  AiproductdataenhancerFillProductDataCheckResponse,
   AiproductdataenhancerFillProductDataRequest,
   AiproductdataenhancerFillProductDataResponse,
   AiproductdataenhancerTranslateDataRequest,
@@ -22,6 +24,10 @@ import type {
   RpcStatus,
 } from '../models/index';
 import {
+    AiproductdataenhancerFillProductDataCheckRequestFromJSON,
+    AiproductdataenhancerFillProductDataCheckRequestToJSON,
+    AiproductdataenhancerFillProductDataCheckResponseFromJSON,
+    AiproductdataenhancerFillProductDataCheckResponseToJSON,
     AiproductdataenhancerFillProductDataRequestFromJSON,
     AiproductdataenhancerFillProductDataRequestToJSON,
     AiproductdataenhancerFillProductDataResponseFromJSON,
@@ -36,6 +42,10 @@ import {
 
 export interface AiProductDataEnhancerFillProductDataRequest {
     body: AiproductdataenhancerFillProductDataRequest;
+}
+
+export interface AiProductDataEnhancerFillProductDataCheckRequest {
+    body: AiproductdataenhancerFillProductDataCheckRequest;
 }
 
 export interface AiProductDataEnhancerTranslateDataRequest {
@@ -75,6 +85,37 @@ export class AiProductDataEnhancerApi extends runtime.BaseAPI {
      */
     async aiProductDataEnhancerFillProductData(requestParameters: AiProductDataEnhancerFillProductDataRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AiproductdataenhancerFillProductDataResponse> {
         const response = await this.aiProductDataEnhancerFillProductDataRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async aiProductDataEnhancerFillProductDataCheckRaw(requestParameters: AiProductDataEnhancerFillProductDataCheckRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AiproductdataenhancerFillProductDataCheckResponse>> {
+        if (requestParameters.body === null || requestParameters.body === undefined) {
+            throw new runtime.RequiredError('body','Required parameter requestParameters.body was null or undefined when calling aiProductDataEnhancerFillProductDataCheck.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        const response = await this.request({
+            path: `/aiproductdataenhancer.AiProductDataEnhancer/FillProductDataCheck`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AiproductdataenhancerFillProductDataCheckRequestToJSON(requestParameters.body),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AiproductdataenhancerFillProductDataCheckResponseFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async aiProductDataEnhancerFillProductDataCheck(requestParameters: AiProductDataEnhancerFillProductDataCheckRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AiproductdataenhancerFillProductDataCheckResponse> {
+        const response = await this.aiProductDataEnhancerFillProductDataCheckRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

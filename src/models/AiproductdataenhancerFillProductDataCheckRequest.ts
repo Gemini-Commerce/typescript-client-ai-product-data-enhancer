@@ -15,13 +15,19 @@
 /**
  * 
  * @export
- * @interface AiproductdataenhancerFillProductDataResponse
+ * @interface AiproductdataenhancerFillProductDataCheckRequest
  */
-export interface AiproductdataenhancerFillProductDataResponse {
+export interface AiproductdataenhancerFillProductDataCheckRequest {
     /**
      * 
      * @type {string}
-     * @memberof AiproductdataenhancerFillProductDataResponse
+     * @memberof AiproductdataenhancerFillProductDataCheckRequest
+     */
+    'tenantId'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof AiproductdataenhancerFillProductDataCheckRequest
      */
     'jobId'?: string;
 }

@@ -30,4 +30,10 @@ export interface AiproductdataenhancerProductDataToFill {
      * @memberof AiproductdataenhancerProductDataToFill
      */
     'valueSet'?: Array<string>;
+    /**
+     * Metadata is an optional field to provide additional information to the AI like, max length, min length, field description, etc.
+     * @type {{ [key: string]: string; }}
+     * @memberof AiproductdataenhancerProductDataToFill
+     */
+    'metadata'?: { [key: string]: string; };
 }
