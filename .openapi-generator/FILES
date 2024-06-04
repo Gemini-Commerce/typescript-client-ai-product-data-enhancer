@@ -14,6 +14,7 @@ middleware.ts
 models/AiproductdataenhancerFillProductDataRequest.ts
 models/AiproductdataenhancerFillProductDataResponse.ts
 models/AiproductdataenhancerLanguageCode.ts
+models/AiproductdataenhancerProductDataToFill.ts
 models/AiproductdataenhancerProductInformation.ts
 models/ObjectSerializer.ts
 models/ProtobufAny.ts
