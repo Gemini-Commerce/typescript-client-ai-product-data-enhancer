@@ -1,16 +1,22 @@
+export * from '../models/AiproductdataenhancerDataToTranslate';
 export * from '../models/AiproductdataenhancerFillProductDataRequest';
 export * from '../models/AiproductdataenhancerFillProductDataResponse';
 export * from '../models/AiproductdataenhancerLanguageCode';
 export * from '../models/AiproductdataenhancerProductDataToFill';
 export * from '../models/AiproductdataenhancerProductInformation';
+export * from '../models/AiproductdataenhancerTranslateDataRequest';
+export * from '../models/AiproductdataenhancerTranslateDataResponse';
 export * from '../models/ProtobufAny';
 export * from '../models/RpcStatus';
 
+import { AiproductdataenhancerDataToTranslate } from '../models/AiproductdataenhancerDataToTranslate';
 import { AiproductdataenhancerFillProductDataRequest       } from '../models/AiproductdataenhancerFillProductDataRequest';
 import { AiproductdataenhancerFillProductDataResponse } from '../models/AiproductdataenhancerFillProductDataResponse';
 import { AiproductdataenhancerLanguageCode } from '../models/AiproductdataenhancerLanguageCode';
 import { AiproductdataenhancerProductDataToFill } from '../models/AiproductdataenhancerProductDataToFill';
 import { AiproductdataenhancerProductInformation } from '../models/AiproductdataenhancerProductInformation';
+import { AiproductdataenhancerTranslateDataRequest    } from '../models/AiproductdataenhancerTranslateDataRequest';
+import { AiproductdataenhancerTranslateDataResponse } from '../models/AiproductdataenhancerTranslateDataResponse';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { RpcStatus } from '../models/RpcStatus';
 
@@ -31,10 +37,13 @@ let enumsMap: Set<string> = new Set<string>([
 ]);
 
 let typeMap: {[index: string]: any} = {
+    "AiproductdataenhancerDataToTranslate": AiproductdataenhancerDataToTranslate,
     "AiproductdataenhancerFillProductDataRequest": AiproductdataenhancerFillProductDataRequest,
     "AiproductdataenhancerFillProductDataResponse": AiproductdataenhancerFillProductDataResponse,
     "AiproductdataenhancerProductDataToFill": AiproductdataenhancerProductDataToFill,
     "AiproductdataenhancerProductInformation": AiproductdataenhancerProductInformation,
+    "AiproductdataenhancerTranslateDataRequest": AiproductdataenhancerTranslateDataRequest,
+    "AiproductdataenhancerTranslateDataResponse": AiproductdataenhancerTranslateDataResponse,
     "ProtobufAny": ProtobufAny,
     "RpcStatus": RpcStatus,
 }
