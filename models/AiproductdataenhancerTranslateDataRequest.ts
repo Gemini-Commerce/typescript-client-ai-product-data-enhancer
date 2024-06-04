@@ -16,7 +16,8 @@ import { HttpFile } from '../http/http';
 
 export class AiproductdataenhancerTranslateDataRequest {
     'tenantId'?: string;
-    'languageCode'?: AiproductdataenhancerLanguageCode;
+    'targetLanguage'?: AiproductdataenhancerLanguageCode;
+    'sourceLanguage'?: AiproductdataenhancerLanguageCode;
     'dataToTranslate'?: Array<AiproductdataenhancerDataToTranslate>;
 
     static readonly discriminator: string | undefined = undefined;
@@ -29,8 +30,14 @@ export class AiproductdataenhancerTranslateDataRequest {
             "format": ""
         },
         {
-            "name": "languageCode",
-            "baseName": "languageCode",
+            "name": "targetLanguage",
+            "baseName": "targetLanguage",
+            "type": "AiproductdataenhancerLanguageCode",
+            "format": ""
+        },
+        {
+            "name": "sourceLanguage",
+            "baseName": "sourceLanguage",
             "type": "AiproductdataenhancerLanguageCode",
             "format": ""
         },
