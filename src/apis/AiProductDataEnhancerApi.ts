@@ -17,6 +17,8 @@ import * as runtime from '../runtime';
 import type {
   AiproductdataenhancerFillProductDataRequest,
   AiproductdataenhancerFillProductDataResponse,
+  AiproductdataenhancerTranslateDataRequest,
+  AiproductdataenhancerTranslateDataResponse,
   RpcStatus,
 } from '../models/index';
 import {
@@ -24,12 +26,20 @@ import {
     AiproductdataenhancerFillProductDataRequestToJSON,
     AiproductdataenhancerFillProductDataResponseFromJSON,
     AiproductdataenhancerFillProductDataResponseToJSON,
+    AiproductdataenhancerTranslateDataRequestFromJSON,
+    AiproductdataenhancerTranslateDataRequestToJSON,
+    AiproductdataenhancerTranslateDataResponseFromJSON,
+    AiproductdataenhancerTranslateDataResponseToJSON,
     RpcStatusFromJSON,
     RpcStatusToJSON,
 } from '../models/index';
 
 export interface AiProductDataEnhancerFillProductDataRequest {
     body: AiproductdataenhancerFillProductDataRequest;
+}
+
+export interface AiProductDataEnhancerTranslateDataRequest {
+    body: AiproductdataenhancerTranslateDataRequest;
 }
 
 /**
@@ -65,6 +75,37 @@ export class AiProductDataEnhancerApi extends runtime.BaseAPI {
      */
     async aiProductDataEnhancerFillProductData(requestParameters: AiProductDataEnhancerFillProductDataRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AiproductdataenhancerFillProductDataResponse> {
         const response = await this.aiProductDataEnhancerFillProductDataRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async aiProductDataEnhancerTranslateDataRaw(requestParameters: AiProductDataEnhancerTranslateDataRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<AiproductdataenhancerTranslateDataResponse>> {
+        if (requestParameters.body === null || requestParameters.body === undefined) {
+            throw new runtime.RequiredError('body','Required parameter requestParameters.body was null or undefined when calling aiProductDataEnhancerTranslateData.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        const response = await this.request({
+            path: `/aiproductdataenhancer.AiProductDataEnhancer/TranslateData`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: AiproductdataenhancerTranslateDataRequestToJSON(requestParameters.body),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => AiproductdataenhancerTranslateDataResponseFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async aiProductDataEnhancerTranslateData(requestParameters: AiProductDataEnhancerTranslateDataRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<AiproductdataenhancerTranslateDataResponse> {
+        const response = await this.aiProductDataEnhancerTranslateDataRaw(requestParameters, initOverrides);
         return await response.value();
     }
 

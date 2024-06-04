@@ -5,11 +5,14 @@ package.json
 src/apis/AiProductDataEnhancerApi.ts
 src/apis/index.ts
 src/index.ts
+src/models/AiproductdataenhancerDataToTranslate.ts
 src/models/AiproductdataenhancerFillProductDataRequest.ts
 src/models/AiproductdataenhancerFillProductDataResponse.ts
 src/models/AiproductdataenhancerLanguageCode.ts
 src/models/AiproductdataenhancerProductDataToFill.ts
 src/models/AiproductdataenhancerProductInformation.ts
+src/models/AiproductdataenhancerTranslateDataRequest.ts
+src/models/AiproductdataenhancerTranslateDataResponse.ts
 src/models/ProtobufAny.ts
 src/models/RpcStatus.ts
 src/models/index.ts
